@@ -62,8 +62,18 @@
   <script>
     const inputs = document.querySelectorAll('.controls input');
 
+    /*
+    The dataset element is the custom built data- element, in this case the data-sizing class attribute
+    given to the html elements. So in the line belwo, we use the dataset and out if it, the sizing value
+    or, as for the color, there is not dataset set, so we match also "nothing"
+    */
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
+      /*
+      The suffic variable will just be added because without this, this.value would only be for example
+      30 but we need to have 30px. In case of the color, there is no suffix, so nothing will be added
+      as suffix, which is what we need.
+      */
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     }
 
