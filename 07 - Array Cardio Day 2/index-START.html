@@ -53,14 +53,14 @@
 
     // shorthand
     const comment = comments.find(comment => comment.id === 823423);
-    console.log(comment);
+    console.table(comment);
 
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
     const index = comments.findIndex(comment => comment.id === 823423);
-    console.log(index);
+    console.table(index);
 
     // comments.splice(index, 1);
 
@@ -69,7 +69,7 @@
       ...comments.slice(index + 1)
     ];
 
-    console.log(newComments);
+    console.table(newComments);
 
   </script>
 </body>
